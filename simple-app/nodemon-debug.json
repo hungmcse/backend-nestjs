@@ -1,0 +1,7 @@
+{
+	"watch": [
+		"dist"
+	],
+	"ext": "js",
+	"exec": "NODE_PATH=. node --inspect=0.0.0.0 dist/src/main"
+}

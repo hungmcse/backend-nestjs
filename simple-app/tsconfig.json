@@ -1,0 +1,45 @@
+{
+	"compilerOptions": {
+		"paths": {
+			"*": ["node_modules/*"],
+			"src/*": ["src/*"],
+			"@internal/*": ["./*"]
+		},
+		"module": "commonjs",
+		"declaration": true,
+		"removeComments": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"target": "es2019",
+		"inlineSourceMap": true,
+		"outDir": "dist",
+		"baseUrl": ".",
+		"incremental": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strictNullChecks": true,
+		"strict": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"alwaysStrict": true,
+		"noFallthroughCasesInSwitch": true,
+		"noEmitOnError": true,
+		"resolveJsonModule": true,
+		"preserveSymlinks": true,
+		"typeRoots": [
+			"./node_modules/@types",
+			"./src/@types"
+		]
+	},
+	"files": [
+		"./src/@types/global.d.ts"
+	],
+	"include": [
+		"./src/**/*.ts",
+		"./src/**/*.json",
+		"./src/**/*.html",
+		"./shared/**/*.ts",
+		"./core/**/*.ts",
+		"./core/**/*.json"
+	]
+}
