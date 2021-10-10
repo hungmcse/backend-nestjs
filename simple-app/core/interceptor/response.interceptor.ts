@@ -1,9 +1,9 @@
-import {CallHandler, ExecutionContext, HttpException, Injectable, Logger, NestInterceptor} from "@nestjs/common";
-import {Observable, of} from "rxjs";
-import {catchError, map} from "rxjs/operators";
-import {ResponseDTO} from "@internal/shared/dto/base.dto";
-import {Response} from "express";
-import {SYSTEM_CODE} from "@internal/shared/code/system-code";
+import {CallHandler, ExecutionContext, HttpException, Injectable, Logger, NestInterceptor} from '@nestjs/common';
+import {Observable, of} from 'rxjs';
+import {catchError, map} from 'rxjs/operators';
+import {ResponseDTO} from '@internal/shared/dto/base.dto';
+import {Response} from 'express';
+import {SYSTEM_CODE} from '@internal/shared/code/system-code';
 
 @Injectable()
 export class BaseResponseInterceptor<T>

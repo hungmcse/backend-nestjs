@@ -1,8 +1,8 @@
-import {Injectable} from "@nestjs/common";
-import {JwtService} from "@nestjs/jwt";
-import {JWTPayload} from "@internal/core/auth/auth.payload";
-import {EnvironmentService} from "@internal/core/environment/environment.service";
-import {classToPlain} from "class-transformer";
+import {Injectable} from '@nestjs/common';
+import {JwtService} from '@nestjs/jwt';
+import {JWTPayload} from '@internal/core/auth/auth.payload';
+import {EnvironmentService} from '@internal/core/environment/environment.service';
+import {classToPlain} from 'class-transformer';
 
 @Injectable()
 export class AuthService {

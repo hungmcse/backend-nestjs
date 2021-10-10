@@ -1,8 +1,8 @@
-import {ValueProvider} from "@nestjs/common/interfaces";
-import {Injectable, Logger} from "@nestjs/common";
-import {validateSync} from "class-validator";
-import {plainToClass} from "class-transformer";
-import {Environment, EnvironmentService} from "@internal/core/environment/environment.service";
+import {ValueProvider} from '@nestjs/common/interfaces';
+import {Injectable, Logger} from '@nestjs/common';
+import {validateSync} from 'class-validator';
+import {plainToClass} from 'class-transformer';
+import {Environment, EnvironmentService} from '@internal/core/environment/environment.service';
 
 export class AppEnvironment extends Environment {
 }

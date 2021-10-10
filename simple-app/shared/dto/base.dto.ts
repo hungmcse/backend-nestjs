@@ -1,11 +1,11 @@
+type Constructor<T = {}> = new (...args: any[]) => T;
 
 export abstract class DTO {
-	public abstract paramsDTO: any;
-	public abstract queryDTO: any;
-	public abstract bodyDTO: any;
+	public abstract query: any;
+	public abstract body: any;
 	public abstract readonly url: string;
 	public abstract readonly method: METHOD;
-	public abstract readonly responseDTOClass: any;
+	public abstract readonly response: Constructor<any>;
 }
 
 export class ResponseDTO<T> {
@@ -17,7 +17,7 @@ export class ResponseDTO<T> {
 }
 
 export enum METHOD {
-	GET = "GET",
-	POST = "POST",
-	PUT = "PUT",
+	GET = 'GET',
+	POST = 'POST',
+	PUT = 'PUT',
 }

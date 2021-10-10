@@ -1,13 +1,13 @@
-import {ValueProvider} from "@nestjs/common/interfaces";
-import {Injectable, Logger} from "@nestjs/common";
-import {IsBoolean, IsEnum, IsNumber, IsString, validateSync} from "class-validator";
-import {Expose, plainToClass, Type} from "class-transformer";
+import {ValueProvider} from '@nestjs/common/interfaces';
+import {Injectable, Logger} from '@nestjs/common';
+import {IsBoolean, IsEnum, IsNumber, IsString, validateSync} from 'class-validator';
+import {Expose, plainToClass, Type} from 'class-transformer';
 
 export enum ENVIRONMENTS {
-	DEVELOP = "DEVELOP",
-	SIT = "SIT",
-	UAT = "UAT",
-	PRODUCTION = "PRODUCTION",
+	DEVELOP = 'DEVELOP',
+	SIT = 'SIT',
+	UAT = 'UAT',
+	PRODUCTION = 'PRODUCTION',
 }
 
 export class Environment {
@@ -43,11 +43,11 @@ export class Environment {
 
 	@IsString()
 	@Expose()
-	public APP_BASE_URL: string = "";
+	public APP_BASE_URL: string = '';
 
 	@IsString()
 	@Expose()
-	public JWT_SECRET: string = "";
+	public JWT_SECRET: string = '';
 
 	@IsNumber()
 	@Type(() => Number)

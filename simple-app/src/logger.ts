@@ -1,15 +1,16 @@
-import {LoggerService} from "@nestjs/common";
-import * as Pino from "pino";
+import {LoggerService} from '@nestjs/common';
+import * as Pino from 'pino';
 
 export const pino = Pino({
-	level: "trace",
+	level: 'trace',
 });
 
 export class TinyLogger implements LoggerService {
 
 	constructor(
 		private context: string,
-	) {}
+	) {
+	}
 
 	public log(message: any, context?: string | undefined): void {
 		pino.trace(this.context + `[${context}]` + message);
@@ -20,12 +21,12 @@ export class TinyLogger implements LoggerService {
 	}
 
 	public error(message: any, trace?: string | undefined, context?: string | undefined): void {
-		pino.error(this.context + `[${context}]` + message + "---" + trace);
-    }
+		pino.error(this.context + `[${context}]` + message + '---' + trace);
+	}
 
 	public warn(message: any, context?: string | undefined): void {
 		pino.warn(this.context + `[${context}]` + message);
-    }
+	}
 
 	public debug(message: any, context?: string | undefined): void {
 		pino.debug(this.context + `[${context}]` + message);

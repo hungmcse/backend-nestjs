@@ -16,6 +16,7 @@
 			"@pm2",
 			"rxjs"
 		],
+		"quotemark": [true, "single"],
 		"no-this-assignment": [
 			true,
 			{

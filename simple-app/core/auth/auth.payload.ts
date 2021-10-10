@@ -1,9 +1,9 @@
-import {IsEnum, IsNumber} from "class-validator";
-import {Exclude, Expose} from "class-transformer";
+import {IsEnum, IsNumber} from 'class-validator';
+import {Exclude, Expose} from 'class-transformer';
 
 export enum TOKEN_TYPE {
-	BASE = "BASE",
-	USER = "USER",
+	BASE = 'BASE',
+	USER = 'USER',
 }
 
 export enum PERMISSION {

@@ -1,11 +1,11 @@
-import {Exclude, Expose, Type} from "class-transformer";
-import {IsDate, IsNotEmpty, IsNumber, IsOptional} from "class-validator";
+import {Exclude, Expose, Type} from 'class-transformer';
+import {IsDate, IsNotEmpty, IsNumber, IsOptional} from 'class-validator';
 import {
 	CreateDateColumn,
 	UpdateDateColumn,
 	Column,
 	PrimaryGeneratedColumn,
-} from "typeorm";
+} from 'typeorm';
 
 @Exclude()
 export class BaseEntity {

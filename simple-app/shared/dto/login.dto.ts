@@ -1,5 +1,5 @@
-import {DTO, METHOD} from "@internal/shared/dto/base.dto";
-import {IsString} from "class-validator";
+import {DTO, METHOD} from './base.dto';
+import {IsString} from 'class-validator';
 
 export class LoginBodyDto {
 	@IsString()
@@ -20,14 +20,14 @@ export class LoginResponseDto {
 }
 
 export class LoginDto extends DTO {
-	public static url = "api/login";
+	public static url = 'api/login';
 	public readonly method = METHOD.POST;
-	public queryDTO = undefined;
-	public paramsDTO = undefined;
-	public readonly responseDTOClass = LoginResponseDto;
+	public query = undefined;
+	public params = undefined;
+	public readonly response = LoginResponseDto;
 	public readonly url = LoginDto.url;
 
-	constructor(public bodyDTO: LoginBodyDto) {
+	constructor(public body: LoginBodyDto) {
 		super();
 	}
 }
