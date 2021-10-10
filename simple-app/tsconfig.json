@@ -37,6 +37,7 @@
 		"./src/**/*.html",
 		"./shared/**/*.ts",
 		"./core/**/*.ts",
-		"./core/**/*.json"
+		"./core/**/*.json",
+		"./test/**/*.ts"
 	]
 }

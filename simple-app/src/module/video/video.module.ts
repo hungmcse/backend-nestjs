@@ -4,7 +4,6 @@ import {VideoSql} from './video.sql';
 import {VideoController} from './video.controller';
 
 @Module({
-	imports: [VideoModule],
 	providers: [
 		VideoService,
 		VideoSql,
