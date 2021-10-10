@@ -3,6 +3,7 @@ export interface IVideo {
 	author: string;
 	description: string,
 	title: string,
+	source: VIDEO_SOURCE,
 }
 
 export enum VIDEO_SOURCE {
