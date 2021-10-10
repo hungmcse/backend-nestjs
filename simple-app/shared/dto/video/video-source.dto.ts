@@ -25,7 +25,7 @@ export class YoutubeVideoDto extends DTO {
 	public url = '/video';
 	public method = METHOD.GET;
 	body: undefined;
-	public readonly response = YoutubeVideoResponseDto;
+	public readonly response!: YoutubeVideoResponseDto;
 	public query: IYoutubeVideoQueryDto;
 
 	constructor(query: IYoutubeVideoQueryDto) {
