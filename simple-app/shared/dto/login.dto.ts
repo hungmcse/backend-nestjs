@@ -24,7 +24,7 @@ export class LoginDto extends DTO {
 	public readonly method = METHOD.POST;
 	public query = undefined;
 	public params = undefined;
-	public readonly response = LoginResponseDto;
+	public readonly response!: LoginResponseDto;
 	public readonly url = LoginDto.url;
 
 	constructor(public body: LoginBodyDto) {

@@ -27,19 +27,16 @@
 		"resolveJsonModule": true,
 		"preserveSymlinks": true,
 		"typeRoots": [
-			"./node_modules/@types",
-			"./src/@types"
+			"./node_modules/@types"
 		]
 	},
-	"files": [
-		"./src/@types/global.d.ts"
-	],
 	"include": [
 		"./src/**/*.ts",
 		"./src/**/*.json",
 		"./src/**/*.html",
 		"./shared/**/*.ts",
 		"./core/**/*.ts",
-		"./core/**/*.json"
+		"./core/**/*.json",
+		"./test/**/*.ts"
 	]
 }

@@ -1,11 +1,10 @@
-type Constructor<T = {}> = new (...args: any[]) => T;
 
 export abstract class DTO {
 	public abstract query: any;
 	public abstract body: any;
 	public abstract readonly url: string;
 	public abstract readonly method: METHOD;
-	public abstract readonly response: Constructor<any>;
+	public abstract readonly response: any;
 }
 
 export class ResponseDTO<T> {

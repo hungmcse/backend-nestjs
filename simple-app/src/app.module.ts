@@ -6,6 +6,7 @@ import {AuthModule} from '@internal/core/auth/auth.module';
 import {UserModule} from './module/user/user.module';
 import {AppEnvironmentModule} from './module/environment/environment.module';
 import {CryptoModule} from '@internal/core/crypto/crypto.module';
+import {VideoModule} from './module/video/video.module';
 
 @Module({
 	imports: [
@@ -14,6 +15,7 @@ import {CryptoModule} from '@internal/core/crypto/crypto.module';
 		UserModule,
 		AuthModule,
 		CryptoModule,
+		VideoModule,
 	],
 	providers: [{
 		provide: APP_INTERCEPTOR,

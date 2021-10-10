@@ -1,4 +1,4 @@
-import {Module} from '@nestjs/common';
+import {Global, Module} from '@nestjs/common';
 import {JwtModule, JwtModuleOptions} from '@nestjs/jwt';
 import {PassportModule} from '@nestjs/passport';
 import {AuthService} from './auth.service';
@@ -6,6 +6,7 @@ import {JwtStrategy} from './jwt.strategy';
 import {EnvironmentService} from '@internal/core/environment/environment.service';
 import {EnvironmentModule} from '@internal/core/environment/environment.module';
 
+@Global()
 @Module({
 	imports: [
 		PassportModule.register({defaultStrategy: 'jwt'}),

@@ -1,20 +1,9 @@
 import {Exclude, Expose, Type} from 'class-transformer';
-import {IsDate, IsNotEmpty, IsNumber, IsOptional} from 'class-validator';
-import {
-	CreateDateColumn,
-	UpdateDateColumn,
-	Column,
-	PrimaryGeneratedColumn,
-} from 'typeorm';
+import {IsDate, IsOptional} from 'class-validator';
+import {Column, CreateDateColumn, UpdateDateColumn,} from 'typeorm';
 
 @Exclude()
 export class BaseEntity {
-
-	@Expose()
-	@PrimaryGeneratedColumn()
-	@IsNumber() @IsNotEmpty()
-	public id!: number;
-
 	@Expose()
 	@Type(() => Date)
 	@CreateDateColumn({select: false})

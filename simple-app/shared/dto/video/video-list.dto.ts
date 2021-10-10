@@ -1,18 +1,21 @@
-import {DTO, METHOD} from '../base.dto';
+import {METHOD} from '../base.dto';
 import {IVideo} from '../../model/video.model';
+import {PagingDto, PagingRequestDto, PagingResponseDto} from '@internal/shared/dto/paging.dto';
 
-export class VideoListResponseDto {
-	public items!: Array<Pick<IVideo, 'author' | 'url'>>
+export class VideoListResponseDto extends PagingResponseDto<Pick<IVideo, 'author' | 'url' | 'source'>> {
+	constructor(data: Array<Pick<IVideo, 'author' | 'url' | 'source'>>, currentPage: number, totalItems: number, pageSize?: number) {
+		super(data, currentPage, totalItems, pageSize);
+	}
 }
 
-export class VideoListDto extends DTO {
-	public url = '/list-video';
+export class VideoListDto extends PagingDto<Pick<IVideo, 'author' | 'url'>> {
+	public static url = 'api/video'
+	public url = VideoListDto.url;
 	public method = METHOD.GET;
-	body: undefined;
-	public readonly response = VideoListResponseDto;
-	query: undefined;
+	public body: undefined;
+	public readonly response!: VideoListResponseDto;
 
-	constructor() {
+	constructor(public query: PagingRequestDto) {
 		super();
 	}
 }
