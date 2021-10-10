@@ -6,9 +6,6 @@ export class VideoBodyDto {
 	@IsString()
 	public url!: string;
 
-	@IsString()
-	public author!: string;
-
 	@IsEnum(VIDEO_SOURCE)
 	public source!: VIDEO_SOURCE
 }

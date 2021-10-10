@@ -52,7 +52,7 @@ export class Environment {
 	@IsNumber()
 	@Type(() => Number)
 	@Expose()
-	public TOKEN_EXPIRE: number = 180;
+	public TOKEN_EXPIRE: number = 1800;
 
 	@Expose()
 	@IsEnum(ENVIRONMENTS)
