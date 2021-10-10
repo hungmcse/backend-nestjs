@@ -5,9 +5,8 @@ export interface IVideo {
 	title: string,
 }
 
-
 export enum VIDEO_SOURCE {
-	YOUTUBE = 'YOUTUBE'
+	YOUTUBE = 'YOUTUBE',
 }
 
 export enum YOUTUBE_PART {
@@ -16,5 +15,5 @@ export enum YOUTUBE_PART {
 }
 
 export const VIDEO_EMBED_URL: { [key in VIDEO_SOURCE]: string } = {
-	[VIDEO_SOURCE.YOUTUBE]: 'https://www.youtube.com/embed/'
+	[VIDEO_SOURCE.YOUTUBE]: 'https://www.youtube.com/embed/',
 }
