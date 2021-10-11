@@ -12,9 +12,7 @@ import {FastifyAdapter, NestFastifyApplication} from '@nestjs/platform-fastify';
 import {PROCESS_SIGNAL} from './constant';
 import {TinyLogger} from './logger';
 import {EnvironmentProvider} from './module/environment/environment.service';
-import {readFileSync} from 'fs';
 import {FastifyRequest} from 'fastify';
-import {ENVIRONMENTS} from '@internal/core/environment/environment.service';
 import * as cors from 'fastify-cors';
 
 /**
@@ -22,21 +20,13 @@ import * as cors from 'fastify-cors';
  */
 async function init(): Promise<NestFastifyApplication> {
 	const adapter = new FastifyAdapter({
-		https: {
-			allowHTTP1: true,
-			cert: readFileSync(path.resolve('.', './ssl/ssl.cert')),
-			key: readFileSync(path.resolve('.', './ssl/ssl.key')),
-		},
-		http2: true,
 		bodyLimit: 1048576, // bytes
 	});
 	adapter.register(accepts.default);
 
-	if (EnvironmentProvider.useValue.ENVIRONMENT.ENV_PUBLISH_API !== ENVIRONMENTS.PRODUCTION) {
-		adapter.register(cors.default, {
-			origin: '*',
-		});
-	}
+	adapter.register(cors.default, {
+		origin: '*',
+	});
 
 	adapter.getInstance()
 		.addContentTypeParser(
